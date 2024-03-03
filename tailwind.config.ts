@@ -22,9 +22,10 @@ const config: Config = {
       screens: {
         xs: "450px",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
-      },
+      backgroundImage: (theme) => ({
+        "hero-pattern":
+          "url('https://3dfolio-ivory.vercel.app/assets/herobg-ecbfddc8.png')",
+      }),
     },
   },
   plugins: [],

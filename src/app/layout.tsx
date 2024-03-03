@@ -5,7 +5,7 @@ import { Hero, Navbar } from "@/components";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -20,6 +20,14 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="apple-touch-icon"
+          href="./apple-icon.png"
+          type="image/png"
+          sizes="any"
+        />
+      </head>
       <body className={poppins.className}>
         <div className="relative z-0 bg-primary">{children}</div>
       </body>
