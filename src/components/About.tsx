@@ -1,9 +1,10 @@
 "use client";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { services } from "@/constants";
 import ServiceCard from "./ServiceCard";
+import SectionWrapper from "@/hoc/SectionWrapper";
+import { EmojiCanvas } from "./canvas";
 const About = () => {
   return (
     <>
@@ -22,13 +23,14 @@ const About = () => {
         real-world problems. Let&apos;s work together to bring your ideas to
         life!
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="flex flex-wrap justify-around gap-10">
+        <EmojiCanvas />
         {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
+          <ServiceCard index={index} key={index} {...service} />
         ))}
       </div>
     </>
   );
 };
 
-export default About;
+export default SectionWrapper(About, "about");
