@@ -4,6 +4,7 @@ import {
   ComputersCanvas,
   StarsCanvas,
   EmojiCanvas,
+  SadFaceCanvas,
 } from "./canvas";
 import Hero from "./Hero";
 import Navbar from "./Navbar";

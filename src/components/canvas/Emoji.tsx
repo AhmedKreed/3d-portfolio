@@ -20,7 +20,7 @@ const EmojiCanvas = () => {
         fov: 70,
         near: 0.1,
         far: 200,
-        position: [-5, 2, 0],
+        position: [5, 0, 0],
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -30,6 +30,7 @@ const EmojiCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          rotation={[2 * Math.PI, 0, 6.25]}
         />
         <Emoji />
 

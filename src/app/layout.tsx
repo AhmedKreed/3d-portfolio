@@ -23,7 +23,7 @@ const RootLayout = ({
       <head>
         <link
           rel="apple-touch-icon"
-          href="./apple-icon.png"
+          href="/apple-icon.png"
           type="image/png"
           sizes="any"
         />

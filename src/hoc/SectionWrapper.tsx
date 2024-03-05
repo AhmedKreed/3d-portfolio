@@ -15,7 +15,7 @@ const SectionWrapper = (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="padding-X max-w-7xl mx-auto relative z-0 section-p"
+        className="padding-X max-w-7xl mx-auto relative z-0 section-p overflow-x-hidden"
       >
         <Component />
       </motion.section>
