@@ -9,8 +9,11 @@ interface P {
   index: number;
 }
 const ServiceCard = ({ title, icon, index }: P) => {
+  const options = {
+    reverse: true,
+  };
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt options={options} className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.3, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"

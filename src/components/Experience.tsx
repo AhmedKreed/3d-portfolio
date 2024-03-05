@@ -4,12 +4,16 @@ import { textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 const Experience = () => {
+  const options = {
+    scale: 1.5,
+    speed: 2000,
+  };
   return (
     <>
       <motion.div variants={textVariant(0)} className="overflow-hidden">
         <p className="sectionSubText text-center">WHAT I HAVE DONE SO FAR</p>
         <h2 className="sectionHeadText text-center"> Work Experience.</h2>
-        <Tilt className="py-20">
+        <Tilt options={options} className="py-20">
           <h1 className="text-center mb-4 text-3xl leading-10">
             {" "}
             No work experience yet. ☹️

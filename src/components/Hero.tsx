@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/link";
 import { ComputersCanvas } from ".";
 import Mouse from "./Mouse";
-
+import { Tilt } from "react-tilt";
+const options = { scale: 1.2 };
 const Hero = () => (
   <section className="relative w-full h-screen mx-auto ">
     <div className="padding-X absolute inset-0 top-[120px] max-w-7xl mx-auto flex gap-5 items-start">
@@ -10,8 +12,11 @@ const Hero = () => (
         <div className="w-1 sm:h-80 h-40 violet-gradient" />
       </div>
       <div>
-        <h1 className="heroHeadText">
-          Hi I&apos;m <span className="text-[#915eff]">Ahmed</span>
+        <h1 className="heroHeadText flex gap-8">
+          Hi I&apos;m
+          <Tilt options={options} className="text-[#915eff] z-20 relative">
+            Ahmed
+          </Tilt>
         </h1>
         <p className="heroSubText mt-2 text-white-100">
           I&apos;m Front-end developer

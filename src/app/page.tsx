@@ -5,9 +5,7 @@ import {
   Tech,
   Experience,
   Works,
-  Feedbacks,
   Contact,
-  StarsCanvas,
 } from "../components";
 const Home = () => {
   return (
@@ -20,11 +18,7 @@ const Home = () => {
       <Experience />
       <Tech />
       <Works />
-      <Feedbacks />
-      <div className="relative z-0">
-        <Contact />
-        <StarsCanvas />
-      </div>
+      <Contact />
     </>
   );
 };
