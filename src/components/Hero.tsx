@@ -14,7 +14,7 @@ const Hero = () => (
       <div>
         <h1 className="heroHeadText flex gap-8">
           Hi I&apos;m
-          <Tilt options={options} className="text-[#915eff] z-20 relative">
+          <Tilt options={options} className="text-[#915eff] z-10 relative">
             Ahmed
           </Tilt>
         </h1>
