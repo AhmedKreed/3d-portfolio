@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Hero, Navbar } from "@/components";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,12 +20,7 @@ const RootLayout = ({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="apple-touch-icon"
-          href="/apple-icon.png"
-          type="image/png"
-          sizes="any"
-        />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={poppins.className}>
         <div className="relative z-0 bg-primary">{children}</div>

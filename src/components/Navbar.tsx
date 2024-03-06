@@ -3,8 +3,8 @@ import { logo, close, menu } from "@/assets";
 import { navLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { linkVariants, navVarient } from "@/utils/motion";
 const Navbar = () => {
   const [active, setActive] = useState("");

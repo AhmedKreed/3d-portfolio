@@ -14,7 +14,7 @@ interface P {
     name: string;
     color: string;
   }[];
-  image: any;
+  image: StaticImageData;
   source_code_link: string;
 }
 const ProjectCard = ({

@@ -38,21 +38,15 @@ const Ball = ({ imgUrl }: { imgUrl: StaticImageData }) => {
   );
 };
 
-const BallCanvas = ({ icon }: { icon: StaticImageData }) => {
-  return (
-    <Canvas
-      frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+const BallCanvas = ({ icon }: { icon: StaticImageData }) => (
+  <Canvas frameloop="demand" dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
+    <Suspense fallback={<CanvasLoader />}>
+      <OrbitControls enableZoom={false} />
+      <Ball imgUrl={icon} />
+    </Suspense>
 
-      <Preload all />
-    </Canvas>
-  );
-};
+    <Preload all />
+  </Canvas>
+);
 
 export default BallCanvas;

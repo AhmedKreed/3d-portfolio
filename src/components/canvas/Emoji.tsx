@@ -13,31 +13,29 @@ const Emoji = () => {
   );
 };
 
-const EmojiCanvas = () => {
-  return (
-    <Canvas
-      camera={{
-        fov: 70,
-        near: 0.1,
-        far: 200,
-        position: [5, 0, 0],
-      }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          autoRotateSpeed={8.0}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-          rotation={[2 * Math.PI, 0, 6.25]}
-        />
-        <Emoji />
+const EmojiCanvas = () => (
+  <Canvas
+    camera={{
+      fov: 70,
+      near: 0.1,
+      far: 200,
+      position: [5, 0, 0],
+    }}
+  >
+    <Suspense fallback={<CanvasLoader />}>
+      <OrbitControls
+        autoRotate
+        autoRotateSpeed={8.0}
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+        rotation={[2 * Math.PI, 0, 6.25]}
+      />
+      <Emoji />
 
-        <Preload all />
-      </Suspense>
-    </Canvas>
-  );
-};
+      <Preload all />
+    </Suspense>
+  </Canvas>
+);
 
 export default EmojiCanvas;
